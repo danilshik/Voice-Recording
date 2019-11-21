@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorItemView" format="reference"/>
+    <attr name="colorTitle" format="reference"/>
+    <attr name="colorText" format="reference"/>
+    <attr name="colorCounter" format="reference"/>
+</resources>

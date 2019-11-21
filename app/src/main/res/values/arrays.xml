@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sampling_rate">
+        <item>8 кГЦ (минимальная)</item>
+        <item>11 кГц (телефон)</item>
+        <item>16 кГц (стандартная)</item>
+        <item>22 кГЦ (AM - радио)</item>
+        <item>32 кГЦ (FM - радио)</item>
+        <item>44 кГц (CD)</item>
+        <item>48 кГЦ (DVD, DAT)</item>
+        <item>96 кГЦ (DVD-Audio, MLP 5.1)</item>
+        <item>192 кГЦ (DVD-Audio, MLP 2.1)</item>
+    </string-array>
+
+    <string-array name="sampling_rate_values">
+        <item>8000</item>
+        <item>11025</item>
+        <item>16000</item>
+        <item>22050</item>
+        <item>32000</item>
+        <item>44100</item>
+        <item>48000</item>
+        <item>96000</item>
+        <item>192000</item>
+    </string-array>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/Sound"
+        android:icon="@drawable/ic_surround_sound_black_24dp">
+
+        <ListPreference
+            android:key="@string/sampling_rate_key"
+            android:title="@string/title_list_sampling_rate"
+            android:dialogTitle="@string/dialog_title_list_sampling_rate"
+            android:entries="@array/sampling_rate"
+            android:entryValues="@array/sampling_rate_values"
+            android:summary="16 кГц"/>
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

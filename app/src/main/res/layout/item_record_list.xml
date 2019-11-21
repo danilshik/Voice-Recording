@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_size"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/spacing_normal_16"
+    android:background="?attr/colorItemView">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Запись1"
+        android:textColor="?attr/colorTitle"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/spacing_normal_16"
+        android:layout_toStartOf="@id/tv_duration"
+        />
+
+    <TextView
+        android:id="@+id/tv_date_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="19 ноября 2019 год"
+        android:textColor="?attr/colorTitle"
+        android:textSize="14sp"
+        android:layout_below="@id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:minWidth="@dimen/counter_size"
+        android:layout_height="@dimen/counter_size"
+        android:textSize="12sp"
+        android:background="@drawable/bg_counter"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@android:color/white"
+        tools:text="13:22:07"/>
+
+</RelativeLayout>
