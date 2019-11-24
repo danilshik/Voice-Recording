@@ -113,7 +113,7 @@ class RecordingService : Service() {
 
     private fun stopRecording(isSaved : Boolean = true){
         mediaRecorder?.stop()
-        val durationTimeMilles = Duration.millis(System.currentTimeMillis() - startTimeRecording)
+        val durationTimeMillis = Duration.millis(System.currentTimeMillis() - startTimeRecording)
         mediaRecorder?.reset()
         mediaRecorder?.release()
         stopTimer()
@@ -126,9 +126,9 @@ class RecordingService : Service() {
         Log.d("OutputFileName", outputFileName!!)
         Log.d("OutputFile", outputFile!!)
         Log.d("CreatedDate", createdDate.toString())
-        Log.d("Duration", durationTimeMilles.toString())
+        Log.d("Duration", durationTimeMillis.toString())
 
-        val recordEntity = RecordEntity(0, outputFileName!!, outputFile!!, durationTimeMilles, createdDate)
+        val recordEntity = RecordEntity(0, outputFileName!!, outputFile!!, durationTimeMillis, createdDate)
 
         val intent = if(isSaved)
             Intent(RecorderFragment.ADD_RECORD)
@@ -137,6 +137,7 @@ class RecordingService : Service() {
 
         intent.putExtra("file", recordEntity)
         sendBroadcast(intent)
+        Log.d(TAG, "intent $intent")
 
         
         stopForeground(true)

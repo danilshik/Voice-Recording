@@ -6,4 +6,5 @@
     <color name="color_accent_secondary">#BEAC32EE</color>
     <color name="color_gray_dark">#675F7F</color>
     <color name="color_indicator">#581F99</color>
+    <color name="color_divider_dark">#1F000000</color>
 </resources>

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_record">
+    app:startDestination="@id/nav_record">
     <fragment
         android:id="@+id/nav_record"
         android:name="ru.ddstudio.voicerecording.ui.recorder.RecorderFragment"
-        android:label="AddVoiceFragment" />
+        android:label="AddVoiceFragment" >
+    </fragment>
     <fragment
         android:id="@+id/nav_settings"
         android:name="ru.ddstudio.voicerecording.ui.settings.SettingsFragment"
         android:label="SettingsFragment" />
+
     <fragment
         android:id="@+id/nav_record_list"
         android:name="ru.ddstudio.voicerecording.ui.recording_list.RecordListFragment"
         android:label="RecordListFragment" />
+
 
 </navigation>

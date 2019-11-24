@@ -10,8 +10,8 @@ import ru.ddstudio.voicerecording.data.database.entities.RecordEntity
 @Dao
 interface RecordDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(recordEntity: RecordEntity)
+    suspend fun insert(recordEntity: RecordEntity)
 
-    @Query("SELECT * FROM record ORDER BY created_dateTime ASC")
+    @Query("SELECT * FROM record")
     fun getAllRecording() : LiveData<List<RecordEntity>>
 }

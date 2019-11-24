@@ -17,6 +17,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.fr_record.*
+import kotlinx.android.synthetic.main.fr_record.view.*
 import org.joda.time.DateTime
 import ru.ddstudio.voicerecording.AppDelegate
 import ru.ddstudio.voicerecording.MainViewModelFactory
@@ -64,6 +65,7 @@ class RecorderFragment : Fragment(){
                     TIME_CHANGE -> viewModel.recorderTimeChanged(intent.getLongExtra("timeRecording", 0))
                     ADD_RECORD -> {
                         val recordEntity: RecordEntity = intent.getSerializableExtra("file") as RecordEntity
+                        Log.d("RecorderFragment", recordEntity.toString())
                         viewModel.saveRecord(recordEntity)
                     }
                     DELETE_RECORD -> {
@@ -75,6 +77,8 @@ class RecorderFragment : Fragment(){
         }
         val intentFilter = IntentFilter()
         intentFilter.addAction(TIME_CHANGE)
+        intentFilter.addAction(DELETE_RECORD)
+        intentFilter.addAction(ADD_RECORD)
         context!!.registerReceiver(brReceiver, intentFilter)
 
 
@@ -86,9 +90,9 @@ class RecorderFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fr_record, container, false)
-        btn_save_voice.setOnClickListener{viewModel.stopRecording()}
-        btn_delete_voice.setOnClickListener{viewModel.stopRecording()}
-        fab.setOnClickListener{viewModel.startRecording()}
+        root.btn_save_voice.setOnClickListener{viewModel.stopRecording()}
+        root.btn_delete_voice.setOnClickListener{viewModel.stopRecording()}
+        root.fab.setOnClickListener{viewModel.startRecording()}
 
 
 

@@ -4,4 +4,6 @@
     <attr name="colorTitle" format="reference"/>
     <attr name="colorText" format="reference"/>
     <attr name="colorCounter" format="reference"/>
+    <attr name="colorDivider" format="reference"/>
+
 </resources>
